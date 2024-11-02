@@ -1,0 +1,131 @@
+ul {
+    padding: 0;
+    margin: 0;
+}
+#link-dropsown {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+#dropdown{
+    display: flex;
+    height: 50px;
+    margin-top: 10px;
+
+}
+body {
+    overflow-x: hidden;
+}
+nav {
+    height: 80px;
+    background: #0154A0;
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav li, .icon-menu {
+    height: 50px;
+}
+
+.link-item, .icon-menu, .link-item-sidebar, .dropdown{
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: hsl(0, 0%, 100%);
+    font-weight: 600;
+    transition: 0.5s;
+    margin-top: 5px;
+}
+.link-item:hover, .link-item-sidebar:hover{
+    border-radius: 10px;
+    color: #F9B630;
+}
+.icon-menu {
+    display: none;
+}
+nav li:first-child {
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+}
+nav a:first-child:hover {
+    border: none;
+}
+#sidebar {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 300px;
+    z-index: 999;
+    background: #0154A0;
+    color: #fff;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+#sidebar li {
+    width: 100%;
+    margin-top: 1em;
+}
+#sidebar a {
+    width: 100%;
+    color: #f2f2f2;
+}
+#sidebar a:hover {
+    color: #ffffff;
+    background: #F9B630;
+}
+#sidebar li:first-child {
+    padding: 1em 1em 1.2em 0em;
+    font-size: 2em;
+    cursor: pointer;
+}
+#sidebar li:first-child > i {
+    width: 100%;
+    text-align: end;
+}
+#sidebar li:first-child > i:hover {
+    color: #fff;
+}
+@media screen and (max-width: 800px){
+
+    .link-item{
+        display: none;
+    }
+    .icon-menu, .link-item-sidebar {
+        display: flex;
+    }
+    .icon-menu {
+        overflow-y: hidden;
+        font-size: 36px;
+        color: #fff;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+    .icon-menu:hover{
+        color: #F9B630;
+        border-radius: 10px;
+    }
+    #sidebar{
+        display: none;
+    }
+    #dropdown {
+        display: none;
+    }
+    .icones-sidebar:hover > i:hover{
+        color: #F9B630;
+    }
+}
